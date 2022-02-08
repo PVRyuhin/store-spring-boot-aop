@@ -3,7 +3,7 @@ package store.learnup.services;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import store.learnup.annotations.Loggable;
 
 @Service
 @Slf4j
@@ -16,6 +16,7 @@ public class Store {
         Store.notificator = notificator;
     }
 
+    @Loggable
     public void start() {
         log.info("Start");
 
